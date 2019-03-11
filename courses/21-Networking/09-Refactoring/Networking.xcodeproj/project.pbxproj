@@ -17,6 +17,8 @@
 		A83C302B2108401B00592AE4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A83C30292108401B00592AE4 /* LaunchScreen.storyboard */; };
 		A895579E214278DB00355357 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = A895579D214278DB00355357 /* Course.swift */; };
 		A89557A02142808500355357 /* WebsiteDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = A895579F2142808400355357 /* WebsiteDescription.swift */; };
+		B0F951DF22368DE400123981 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F951DE22368DE400123981 /* MainViewController.swift */; };
+		B0F951E122368E0900123981 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F951E022368E0900123981 /* CollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		A83C302C2108401B00592AE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A895579D214278DB00355357 /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
 		A895579F2142808400355357 /* WebsiteDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebsiteDescription.swift; sourceTree = "<group>"; };
+		B0F951DE22368DE400123981 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		B0F951E022368E0900123981 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +70,8 @@
 			children = (
 				A83C30202108401A00592AE4 /* AppDelegate.swift */,
 				A806CF93210B4EA300574064 /* ImageViewController.swift */,
+				B0F951DE22368DE400123981 /* MainViewController.swift */,
+				B0F951E022368E0900123981 /* CollectionViewCell.swift */,
 				A8255C8321410AFA0074F6D0 /* CoursesViewController.swift */,
 				A895579D214278DB00355357 /* Course.swift */,
 				A895579F2142808400355357 /* WebsiteDescription.swift */,
@@ -152,11 +158,13 @@
 			files = (
 				A895579E214278DB00355357 /* Course.swift in Sources */,
 				A89557A02142808500355357 /* WebsiteDescription.swift in Sources */,
+				B0F951E122368E0900123981 /* CollectionViewCell.swift in Sources */,
 				A806CF94210B4EA300574064 /* ImageViewController.swift in Sources */,
 				A8255C80214103450074F6D0 /* WebViewController.swift in Sources */,
 				A83C30212108401A00592AE4 /* AppDelegate.swift in Sources */,
 				A8255C8621410DFE0074F6D0 /* TableViewCell.swift in Sources */,
 				A8255C8421410AFA0074F6D0 /* CoursesViewController.swift in Sources */,
+				B0F951DF22368DE400123981 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
