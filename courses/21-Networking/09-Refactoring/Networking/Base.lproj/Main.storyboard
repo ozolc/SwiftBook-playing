@@ -45,7 +45,7 @@
             </objects>
             <point key="canvasLocation" x="3703.1999999999998" y="-254.12293853073464"/>
         </scene>
-        <!--Main View Controller-->
+        <!--Controls-->
         <scene sceneID="cZB-kN-qXp">
             <objects>
                 <collectionViewController id="tJG-7s-Kaf" customClass="MainViewController" customModule="Networking" customModuleProvider="target" sceneMemberID="viewController">
@@ -83,7 +83,7 @@
                                     <constraint firstAttribute="bottom" secondItem="2aD-44-bW8" secondAttribute="bottom" id="nFk-in-eIF"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.corner.radius">
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
@@ -97,7 +97,7 @@
                             <outlet property="delegate" destination="tJG-7s-Kaf" id="Bro-qa-ok2"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="zQD-5A-M0G"/>
+                    <navigationItem key="navigationItem" title="Controls" id="OHc-FI-hUF"/>
                     <connections>
                         <segue destination="eEq-kV-HBK" kind="show" identifier="ShowImage" id="DQc-o1-wqs"/>
                         <segue destination="Okz-m4-eD1" kind="show" identifier="OurCourses" id="so2-Li-Gb3"/>
