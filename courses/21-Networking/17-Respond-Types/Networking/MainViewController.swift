@@ -19,6 +19,8 @@ enum Actions: String, CaseIterable {
     case downloadFile = "Download File"
     case ourCoursesAlamofire = "Our Courses (Alamofire)"
     case responseData = "responseData"
+    case responseString = "responseString"
+    case response = "response"
 }
 
 private let reuseIdentifier = "Cell"
@@ -53,12 +55,12 @@ class MainViewController: UICollectionViewController {
         alert = UIAlertController(title: "Downloading...", message: "0%", preferredStyle: .alert)
         
         let height = NSLayoutConstraint(item: alert.view,
-                                       attribute: .height,
-                                       relatedBy: .equal,
-                                       toItem: nil,
-                                       attribute: .notAnAttribute,
-                                       multiplier: 0,
-                                       constant: 170)
+                                        attribute: .height,
+                                        relatedBy: .equal,
+                                        toItem: nil,
+                                        attribute: .notAnAttribute,
+                                        multiplier: 0,
+                                        constant: 170)
         
         alert.view.addConstraint(height)
         
@@ -94,25 +96,25 @@ class MainViewController: UICollectionViewController {
             self.alert.view.addSubview(progressView)
         }
     }
-
-
+    
+    
     // MARK: UICollectionViewDataSource
-
+    
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return actions.count
     }
-
+    
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! CollectionViewCell
-    
+        
         cell.label.text = actions[indexPath.row].rawValue
-    
+        
         return cell
     }
-
+    
     // MARK: UICollectionViewDelegate
-
+    
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         let action = actions[indexPath.row]
@@ -135,6 +137,11 @@ class MainViewController: UICollectionViewController {
             performSegue(withIdentifier: "OurCoursesWithAlamofire", sender: self)
         case .responseData:
             performSegue(withIdentifier: "ResponseData", sender: self)
+            AlamofireNetworkRequest.responseData(url: swiftbookApi)
+        case .responseString:
+            AlamofireNetworkRequest.responseString(url: swiftbookApi)
+        case .response:
+            AlamofireNetworkRequest.response(url: swiftbookApi)
         }
     }
     
