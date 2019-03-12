@@ -23,6 +23,7 @@
 		A895579E214278DB00355357 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = A895579D214278DB00355357 /* Course.swift */; };
 		A89557A02142808500355357 /* WebsiteDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = A895579F2142808400355357 /* WebsiteDescription.swift */; };
 		B00C5B5022377EB300383961 /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00C5B4F22377EB300383961 /* DataProvider.swift */; };
+		B00C5B5222379FFE00383961 /* AlamofireNetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00C5B5122379FFE00383961 /* AlamofireNetworkRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		A895579D214278DB00355357 /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
 		A895579F2142808400355357 /* WebsiteDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebsiteDescription.swift; sourceTree = "<group>"; };
 		B00C5B4F22377EB300383961 /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
+		B00C5B5122379FFE00383961 /* AlamofireNetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireNetworkRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 			children = (
 				A83C30202108401A00592AE4 /* AppDelegate.swift */,
 				A8493E702147D7B7004DE8A8 /* MainViewController.swift */,
+				B00C5B5122379FFE00383961 /* AlamofireNetworkRequest.swift */,
 				A8493E762147DC20004DE8A8 /* NetworkManager.swift */,
 				B00C5B4F22377EB300383961 /* DataProvider.swift */,
 				A8493E722147D7CA004DE8A8 /* CollectionViewCell.swift */,
@@ -253,6 +256,7 @@
 			files = (
 				A8493E7B214924F1004DE8A8 /* ImageProperties.swift in Sources */,
 				A8493E772147DC20004DE8A8 /* NetworkManager.swift in Sources */,
+				B00C5B5222379FFE00383961 /* AlamofireNetworkRequest.swift in Sources */,
 				A8493E732147D7CA004DE8A8 /* CollectionViewCell.swift in Sources */,
 				A895579E214278DB00355357 /* Course.swift in Sources */,
 				A89557A02142808500355357 /* WebsiteDescription.swift in Sources */,
@@ -411,7 +415,10 @@
 				DEVELOPMENT_TEAM = RXJ69EWCMT;
 				INFOPLIST_FILE = Networking/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = ru.aykhal.Networking;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -428,7 +435,10 @@
 				DEVELOPMENT_TEAM = RXJ69EWCMT;
 				INFOPLIST_FILE = Networking/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = ru.aykhal.Networking;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
