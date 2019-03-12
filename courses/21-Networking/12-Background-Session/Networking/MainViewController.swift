@@ -27,6 +27,23 @@ class MainViewController: UICollectionViewController {
     
     private let actions = Actions.allCases
     private var alert: UIAlertController!
+    private let dataProvider = DataProvider()
+    private var filePath: String?
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        registerForNotification()
+        
+        dataProvider.fileLocation = { (location) in
+            // Сохранить файл для дальнейшего использования
+            print("Download finished: \(location.absoluteString)")
+            self.filePath = location.absoluteString
+            self.alert.dismiss(animated: false, completion: nil)
+            self.postNotification()
+        }
+        
+    }
     
     private func showAlert() {
         
@@ -41,7 +58,9 @@ class MainViewController: UICollectionViewController {
                                        constant: 170)
         alert.view.addConstraint(heght)
         
-        let cancelAction = UIAlertAction(title: "Cancel", style: .destructive, handler: nil)
+        let cancelAction = UIAlertAction(title: "Cancel", style: .destructive) { (action) in
+            self.dataProvider.stopDownload()
+        }
         
         alert.addAction(cancelAction)
         present(alert, animated: true) {
@@ -56,17 +75,17 @@ class MainViewController: UICollectionViewController {
             let progressView = UIProgressView(frame: CGRect(x: 0, y: self.alert.view.frame.height - 44, width: self.alert.view.frame.width, height: 2))
             
             progressView.tintColor = .blue
-            progressView.progress = 0.5
+            
+            self.dataProvider.onProgress = { (progress) in
+                
+                progressView.progress = Float(progress)
+                self.alert.message = String(Int(progress * 100)) + "%"
+            }
             
             self.alert.view.addSubview(activityIndicator)
             self.alert.view.addSubview(progressView)
             
         }
-        
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
         
     }
     
@@ -103,8 +122,30 @@ class MainViewController: UICollectionViewController {
             NetworkManager.uploadImage(url: uploadImage)
         case .downloadFile:
             showAlert()
-            print(action.rawValue)
+            dataProvider.startDownload()
         }
+    }
+    
+}
+
+extension MainViewController {
+    
+    private func registerForNotification() {
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound]) { (_, _) in
+            
+        }
+    }
+    
+    private func postNotification() {
+        
+        let content = UNMutableNotificationContent()
+        content.title = "Download complete!"
+        content.body = "Your background transfer has completed. File path: \(filePath!)"
+        
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 3, repeats: false)
+        
+        let request = UNNotificationRequest(identifier: "TransferComplete", content: content, trigger: trigger)
+        UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
     }
     
 }
