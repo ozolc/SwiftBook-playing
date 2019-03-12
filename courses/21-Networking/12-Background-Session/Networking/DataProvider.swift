@@ -16,8 +16,10 @@ class DataProvider: NSObject {
     
     private lazy var bgSession: URLSession = {
         let config = URLSessionConfiguration.background(withIdentifier: "ru.aykhal.Networking")
-        //        config.isDiscretionary = true
-        config.sessionSendsLaunchEvents = true
+        config.isDiscretionary = true // Запуск задачи в оптимальное время (по-умолчанию false)
+        config.timeoutIntervalForRequest = 300 // Время ожидания сети в секундах
+        config.waitsForConnectivity = true // Ожидание подключения к сети (по-умолчанию true
+        config.sessionSendsLaunchEvents = true 
         return URLSession(configuration: config, delegate: self, delegateQueue: nil)
     }()
     
