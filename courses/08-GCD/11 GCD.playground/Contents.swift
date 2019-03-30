@@ -6,10 +6,9 @@ PlaygroundPage.current.needsIndefiniteExecution = true
 class SafeArray<Element> {
     private var array = [Element]()
     private let queue = DispatchQueue.init(label: "DispatchBarrier", attributes: .concurrent)
-//    , attributes: .concurrent
     public func append(element: Element) {
-        queue.async() {
-            print(Thread.current)
+        queue.async(flags: .barrier) {
+//            print(Thread.current)
             self.array.append(element)
         }
     }
