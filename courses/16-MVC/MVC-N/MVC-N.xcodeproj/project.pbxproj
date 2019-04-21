@@ -14,6 +14,9 @@
 		B0AFD6C7226C95F300776512 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0AFD6C5226C95F300776512 /* LaunchScreen.storyboard */; };
 		B0AFD6D9226C9A6400776512 /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AFD6D8226C9A6400776512 /* CommentCell.swift */; };
 		B0AFD6DB226C9B9700776512 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AFD6DA226C9B9700776512 /* Comment.swift */; };
+		B0AFD6DE226C9DD400776512 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AFD6DD226C9DD400776512 /* NetworkService.swift */; };
+		B0AFD6E1226CA0F500776512 /* CommentNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AFD6E0226CA0F500776512 /* CommentNetworkService.swift */; };
+		B0AFD6E3226CA19400776512 /* GetCommentResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AFD6E2226CA19400776512 /* GetCommentResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		B0AFD6C8226C95F300776512 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B0AFD6D8226C9A6400776512 /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
 		B0AFD6DA226C9B9700776512 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		B0AFD6DD226C9DD400776512 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		B0AFD6E0226CA0F500776512 /* CommentNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentNetworkService.swift; sourceTree = "<group>"; };
+		B0AFD6E2226CA19400776512 /* GetCommentResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCommentResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +100,7 @@
 				B0AFD6CE226C962300776512 /* Model */,
 				B0AFD6CF226C962B00776512 /* View */,
 				B0AFD6D0226C963100776512 /* Controller */,
+				B0AFD6DC226C9DBF00776512 /* NetworkService */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -104,6 +111,7 @@
 				B0AFD6D6226C96B100776512 /* Model */,
 				B0AFD6D5226C96AA00776512 /* View */,
 				B0AFD6D4226C96A300776512 /* Controller */,
+				B0AFD6DF226CA0BB00776512 /* CommentNetworkService */,
 			);
 			path = Comments;
 			sourceTree = "<group>";
@@ -129,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				B0AFD6DA226C9B9700776512 /* Comment.swift */,
+				B0AFD6E2226CA19400776512 /* GetCommentResponse.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -140,6 +149,22 @@
 				B0AFD6C8226C95F300776512 /* Info.plist */,
 			);
 			path = "Supporting files";
+			sourceTree = "<group>";
+		};
+		B0AFD6DC226C9DBF00776512 /* NetworkService */ = {
+			isa = PBXGroup;
+			children = (
+				B0AFD6DD226C9DD400776512 /* NetworkService.swift */,
+			);
+			path = NetworkService;
+			sourceTree = "<group>";
+		};
+		B0AFD6DF226CA0BB00776512 /* CommentNetworkService */ = {
+			isa = PBXGroup;
+			children = (
+				B0AFD6E0226CA0F500776512 /* CommentNetworkService.swift */,
+			);
+			path = CommentNetworkService;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -213,9 +238,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0AFD6DE226C9DD400776512 /* NetworkService.swift in Sources */,
 				B0AFD6BF226C95F300776512 /* CommentsViewController.swift in Sources */,
 				B0AFD6BD226C95F300776512 /* AppDelegate.swift in Sources */,
+				B0AFD6E3226CA19400776512 /* GetCommentResponse.swift in Sources */,
 				B0AFD6D9226C9A6400776512 /* CommentCell.swift in Sources */,
+				B0AFD6E1226CA0F500776512 /* CommentNetworkService.swift in Sources */,
 				B0AFD6DB226C9B9700776512 /* Comment.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
