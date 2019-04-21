@@ -17,6 +17,7 @@
 		B0AFD6DE226C9DD400776512 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AFD6DD226C9DD400776512 /* NetworkService.swift */; };
 		B0AFD6E1226CA0F500776512 /* CommentNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AFD6E0226CA0F500776512 /* CommentNetworkService.swift */; };
 		B0AFD6E3226CA19400776512 /* GetCommentResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AFD6E2226CA19400776512 /* GetCommentResponse.swift */; };
+		B0AFD6E7226CA30100776512 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AFD6E6226CA30100776512 /* NetworkError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		B0AFD6DD226C9DD400776512 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		B0AFD6E0226CA0F500776512 /* CommentNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentNetworkService.swift; sourceTree = "<group>"; };
 		B0AFD6E2226CA19400776512 /* GetCommentResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCommentResponse.swift; sourceTree = "<group>"; };
+		B0AFD6E6226CA30100776512 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 		B0AFD6CE226C962300776512 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B0AFD6E6226CA30100776512 /* NetworkError.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -137,7 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				B0AFD6DA226C9B9700776512 /* Comment.swift */,
-				B0AFD6E2226CA19400776512 /* GetCommentResponse.swift */,
+				B0AFD6E5226CA28300776512 /* Responses */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -165,6 +168,14 @@
 				B0AFD6E0226CA0F500776512 /* CommentNetworkService.swift */,
 			);
 			path = CommentNetworkService;
+			sourceTree = "<group>";
+		};
+		B0AFD6E5226CA28300776512 /* Responses */ = {
+			isa = PBXGroup;
+			children = (
+				B0AFD6E2226CA19400776512 /* GetCommentResponse.swift */,
+			);
+			path = Responses;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -239,6 +250,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B0AFD6DE226C9DD400776512 /* NetworkService.swift in Sources */,
+				B0AFD6E7226CA30100776512 /* NetworkError.swift in Sources */,
 				B0AFD6BF226C95F300776512 /* CommentsViewController.swift in Sources */,
 				B0AFD6BD226C95F300776512 /* AppDelegate.swift in Sources */,
 				B0AFD6E3226CA19400776512 /* GetCommentResponse.swift in Sources */,
