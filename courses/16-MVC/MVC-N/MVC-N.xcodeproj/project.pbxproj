@@ -12,6 +12,8 @@
 		B0AFD6C2226C95F300776512 /* Comments.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0AFD6C0226C95F300776512 /* Comments.storyboard */; };
 		B0AFD6C4226C95F300776512 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0AFD6C3226C95F300776512 /* Assets.xcassets */; };
 		B0AFD6C7226C95F300776512 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0AFD6C5226C95F300776512 /* LaunchScreen.storyboard */; };
+		B0AFD6D9226C9A6400776512 /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AFD6D8226C9A6400776512 /* CommentCell.swift */; };
+		B0AFD6DB226C9B9700776512 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AFD6DA226C9B9700776512 /* Comment.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		B0AFD6C3226C95F300776512 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B0AFD6C6226C95F300776512 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B0AFD6C8226C95F300776512 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B0AFD6D8226C9A6400776512 /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
+		B0AFD6DA226C9B9700776512 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				B0AFD6C0226C95F300776512 /* Comments.storyboard */,
+				B0AFD6D8226C9A6400776512 /* CommentCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -123,6 +128,7 @@
 		B0AFD6D6226C96B100776512 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B0AFD6DA226C9B9700776512 /* Comment.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -209,6 +215,8 @@
 			files = (
 				B0AFD6BF226C95F300776512 /* CommentsViewController.swift in Sources */,
 				B0AFD6BD226C95F300776512 /* AppDelegate.swift in Sources */,
+				B0AFD6D9226C9A6400776512 /* CommentCell.swift in Sources */,
+				B0AFD6DB226C9B9700776512 /* Comment.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
